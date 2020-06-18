@@ -1,0 +1,54 @@
+{
+  "name": "weaveframe",
+  "version": "1.0.0",
+  "description": "Mini JS framework for the web.",
+  "main": "dist/weaveframe.js",
+  "types": "dist/weaveframe.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedriking/weaveframe.git"
+  },
+  "keywords": [
+    "arweave",
+    "weaveframe",
+    "framework",
+    "javascript",
+    "react",
+    "preact",
+    "mini",
+    "micro",
+    "small",
+    "tiny",
+    "permaweb"
+  ],
+  "author": "Cedrik Boudreau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedriking/weaveframe/issues"
+  },
+  "homepage": "https://github.com/cedriking/weaveframe#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
